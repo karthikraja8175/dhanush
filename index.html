@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarShine</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logofixed.png" alt="CarShine">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <button class="appointment-btn">Book your slot</button>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h2>Best Car Detailing Services</h2>
+            <h1>Shine on,<br>Drive Proud</h1>
+            <p>At Bagawan Motors, we're committed to earning your <b>trust</b> by providing the <b>highest quality</b> car repair services at a fair price.</p>
+            <button onclick="scrollToForm()">
+                Book Now
+                <div class="arrow-wrapper">
+                    <div class="arrow"></div>   
+                </div>
+                <script>
+                    function scrollToForm() {
+                        document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' });
+                    }
+                    </script>
+            </button>     
+         </div>
+        <div class="hero-image">
+            <img src="images/1.png" alt="Red Car">
+            
+        </div>
+    </div>
+
+    <div class="services">
+      <h2>OUR SERVICES</h2>
+      <p>We offer a wide range of services to help you get back on the road quickly and safely.</p>
+      <div class="service-cards">
+          <div class="service-card">
+              <img src="images/carservice.png" alt="Oil Change">
+              <h3>SERVICE & REPARING</h3>
+              <p>Regular servicing and timely repairs ensure your car's longevity, safety, and optimal performance on the road.</p>
+          </div>
+          <div class="service-card">
+              <img src="images/carpaint.png" alt="ABS Brakes">
+              <h3>TINKERING & PAINTING</h3>
+              <p>Restore your vehicle's bodywork to its original glory with expert tinkering and painting services, ensuring a flawless finish.</p>
+          </div>
+          <div class="service-card">
+              <img src="images/carwashing.png" alt="Transmission Service">
+              <h3>WATER WASHING</h3>
+              <p>Keep your vehicle looking its best with our comprehensive car washing services, removing dirt, grime, and road contaminants.</p>
+          </div>
+          <div class="service-card">
+              <img src="images/wheel.png" alt="Transmission Service">
+              <h3>WHEEL BALANCING & ALIGNMENT</h3>
+              <p>Ensure smooth and safe driving with professional wheel balancing and alignment, reducing tire wear and enhancing vehicle control.</p>
+          </div>
+          <div class="service-card">
+              <img src="images/carspa.png" alt="Transmission Service">
+              <h3>CAR SPA</h3>
+              <p>Pamper your vehicle with our premium car spa services, revitalizing both the interior and exterior for that like-new feel.</p>
+          </div>
+          <div class="service-card">
+            <img src="images/spare.png" alt="Transmission Service">
+            <h3>CAR SPARES</h3>
+            <p>Get high-quality, genuine spare parts to keep your vehicle running smoothly, ensuring reliability and longevity.</p>
+        </div>
+        <div class="service-card">
+          <img src="images/assec.png" alt="Transmission Service">
+          <h3>CAR ACCESSORIES</h3>
+          <p>Upgrade your ride with a wide range of car accessories, enhancing both the style and functionality of your vehicle.</p>
+      </div>
+      <div class="service-card">
+        <img src="images/insurences.png" alt="Transmission Service">
+        <h3>INSURENCES RENEWAL</h3>
+        <p>Stay covered on the road with hassle-free insurance renewal services, ensuring your peace of mind with comprehensive protection.</p>
+    </div>
+    <div class="service-card">
+      <img src="images/battery.png" alt="Transmission Service">
+      <h3>BATTERY SALES & SERVICES</h3>
+      <p>Keep your car powered with our reliable battery sales and services, ensuring your vehicle starts every time without a hitch.</p>
+  </div>
+  <div class="service-card">
+    <img src="images/lpg.png" alt="Transmission Service">
+    <h3>LPG & CNG SERVICES</h3>
+    <p>Maximize fuel efficiency and reduce emissions with our expert LPG/CNG installation and maintenance services, tailored to your vehicle's needs.</p>
+</div>
+          <!-- Add more service cards as needed -->
+      </div>
+    </div>
+  
+
+    <div class="products">
+      <h2>PRODUCTS</h2>
+      <p>Limited-time discount on all products and services Consectetur Adipiscing Elit</p>
+      <div class="card-container">
+        <div class="carousel-wrapper">
+        <div class="carousel">
+        <div class="card">
+            <img src="images/battary.avif" alt="Doors and Paint">
+            <h3>BATTERY</h3>
+            <p class="price"></p>
+            <p class="description">Reliable power source for your vehicle’s electrical systems.</p>
+            <button>Order Now</button>
+        </div>
+        <div class="card">
+            <img src="images/paint.jpg" alt="Custom Interior">
+            <h3>SPRAY PAINT</h3>
+            <p class="price"></p>
+            <p class="description">Quick and versatile solution for refreshing your vehicle's exterior.</p>
+            <button>Order Now</button>
+        </div>
+        <div class="card">
+            <img src="images/SPARKPLUG.jpg" alt="Leather Pushes">
+            <h3>SPARK PLUG</h3>
+            <p class="price"></p>
+            <p class="description">Ensures optimal engine performance by igniting the air-fuel mixture.</p>
+            <button>Order Now</button>
+        </div>
+        <div class="card">
+            <img src="images/RIMS.jpg" alt="Leather Pushes">
+            <h3>RIMS</h3>
+            <p class="price"></p>
+            <p class="description">Enhance your vehicle's appearance and handling with stylish rims.</p>
+            <button>Order Now</button>
+        </div>
+        <div class="card">
+            <img src="images/BUMPERS.jpg" alt="Leather Pushes">
+            <h3>BUMPERS</h3>
+            <p class="price"></p>
+            <p class="description">Protect your vehicle's front and rear from impacts and collisions.</p>
+            <button>Order Now</button>
+        </div>
+        <div class="card">
+            <img src="images/HEADLIGHTS1.jpg" alt="Leather Pushes">
+            <h3>HEAD LIGHTS</h3>
+            <p class="price"></p>
+            <p class="description">Illuminate the road ahead for safer nighttime driving.</p>
+            <button>Order Now</button>
+        </div>
+        <div class="card">
+            <img src="images/SEAT COVERS.jpg" alt="Leather Pushes">
+            <h3>SEAT COVERS</h3>
+            <p class="price"></p>
+            <p class="description">Protect and personalize your vehicle's seats with durable covers.</p>
+            <button>Order Now</button>
+        </div>
+        <div class="card">
+            <img src="images/BRAKPAD.jpg" alt="Leather Pushes">
+            <h3>BRAKING PAD</h3>
+            <p class="price"></p>
+            <p class="description">Crucial for safe stopping, providing reliable friction for your brakes.</p>
+            <button>Order Now</button>
+        </div>
+    </div>
+</div>    
+</div>
+    <script>
+        const carousel = document.querySelector('.carousel');
+   const cards = document.querySelectorAll('.card');
+   const cardCount = cards.length;
+   const visibleCards = 3; // Number of visible cards
+   const cardWidth = cards[0].offsetWidth + 10; // Card width + margin
+   let currentIndex = 0;
+   
+   function showNext() {
+     currentIndex++;
+     if (currentIndex > cardCount - visibleCards) {
+       currentIndex = 0;
+     }
+     carousel.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+   }
+   
+   function showPrev() {
+     currentIndex--;
+     if (currentIndex < 1) {
+       currentIndex = cardCount - visibleCards;
+     }
+     carousel.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+   }
+   
+   setInterval(showNext, 3000); // Move to the next card every 3 seconds
+   
+   // Optional: Add event listeners for manual controls (like buttons to go next/previous)
+   
+       </script>
+   </div>
+  
+
+    <div class="aboutus">
+      <h2>ABOUT AS</h2>
+      <p>Dedicated to top-quality car repair and maintenance.</p>
+      <div class="aboutus-container">
+        <p>At Bagawan Motors, we are dedicated to providing 
+            top-notch car repair and maintenance services to keep your 
+            vehicle running smoothly and safely. With years of experience in 
+            the automotive industry, our skilled technicians are committed to 
+            delivering high-quality repairs and exceptional customer service.</p>
+
+       <div class="mission"> <h3>Our Mission</h3>
+        <p>Our mission is simple: to offer reliable, efficient, and affordable 
+            automotive repair services while ensuring the highest standards of 
+            professionalism. We understand that your vehicle is essential to your 
+            daily life, and we strive to get you back on the road as quickly as possible 
+            without compromising on quality.</p></div>
+      </div>
+      <div class="Why">
+      <div class="title">Why Choose Us?</div> 
+            <div class="choose-contant">
+              <a><img src="images/quality.png"><b>Quality Service</b><br></a>
+              <a><img src="images/experienced.png"><b>Experienced Team</b><br></a>
+              <a><img src="images/coustomer.png"><b>Customer Satisfaction</b><br></a>
+              <a><img src="images/price.png"><b>Convenient Packages</b><br></a>
+            </div> 
+            </div> 
+    </div>
+
+  
+
+
+    <div class="testimonal">
+      <h2>TESTIMONIALS</h2>
+      <p>People love us</p>
+      <div class="testimonal-cards">
+          <div class="testimonal-card">
+            <img src="images/reviews1.png" alt="reviews images">
+              <p>"I brought my car in for a full service, and the team at bagawan motors works exceeded my expectations. The staff was friendly, and my car has never run better. Highly recommend!"</p>
+              <h3>John D.</h3>
+            </div>
+          <div class="testimonal-card">
+            <img src="images/reviews1.png" alt="reviews images">
+              <p>"Fantastic experience! The mechanics are knowledgeable and honest. They fixed a problem that other workshops couldn't identify. I'll definitely be returning for future services."</p>
+              <h3>Sarah K.</h3>       
+            </div>
+          <div class="testimonal-card">
+            <img src="images/reviews1.png" alt="reviews images">
+              <p>"Great service at a reasonable price. The workshop was clean and well-organized, and the work was done quickly. The team even gave me some useful tips on car maintenance."</p>
+              <h3> Rajesh M.</h3>         
+            </div>
+          <div class="testimonal-card">
+            <img src="images/reviews1.png" alt="reviews images">
+              <p>"The customer service at bagawan motors works is top-notch. They explained everything in detail and kept me informed throughout the repair process. My car was ready on time, and the results were excellent."</p>
+              <h3>Emily R.</h3>
+            </div>
+      </div>
+    </div>
+  
+
+    <div class="contact" id="contact-form">
+      <h2>BOOK YOUR SLOT</h2>
+      <p>Fill the form to help you get back on the road quickly and safely.</p>
+      <form class="form">
+            <div class="flex">
+            <label>
+                <input class="input" type="text" placeholder="Firstname" required="">
+            </label>
+            <label>
+                <input class="input" type="text" placeholder="Lastname" required=""> 
+            </label>
+        </div>       
+        <label>
+            <input class="input" type="number" placeholder="Number" required="">
+        </label>  
+        <label>
+            <input class="input" type="text" placeholder="location" required="">        
+        </label>
+        <label>
+            <input class="input" type="message" placeholder="Address" required="">
+        </label>
+        <label>
+            <input class="input" type="text" placeholder="car details--" required="">
+        </label>
+        <label>
+            <input class="input" type="text" placeholder="service" required="">
+            
+        </label>
+        <label>
+        <input class="input" type="message" placeholder="text message" required="">
+        </label>
+        <label class="input-radio">
+            <div class="radio-group">
+                
+                <input type="radio" name="select" id="option-1" checked>
+                <span>Reminder</span>
+                <label for="option-1" class="option option-1">
+                    <div class="dot"></div>
+                    <span>Yes</span>
+                </label>
+                <input type="radio" name="select" id="option-2">
+                <label for="option-2" class="option option-2">
+                    <div class="dot"></div>
+                    <span>No</span>
+                </label>
+            </div>
+        </label>
+        <button class="submit">Book</button>
+    </form>      
+   </div>
+    </div>
+  
+
+    <footer class="footer">
+        <div class="column-logo">
+            <img src="images/logofixed.png" alt="Logo">
+        </div>
+        <div class="column1">
+        <div class="column">
+            <h3>LINK</h3>
+            <ul>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="faqs.html">FAQs</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="support.html">Support</a></li>
+            </ul>
+        </div>
+        <div class="column">
+            <h3>SOCIAL</h3>
+            <ul>
+              <li><a href="https://www.facebook.com">Facebook</a></li>
+              <li><a href="https://www.twitter.com">Twitter</a></li>
+              <li><a href="https://www.instagram.com">Instagram</a></li>
+              <li><a href="https://www.youtube.com">YouTube</a></li>
+            </ul>
+        </div>
+        <div class="column">
+            <h3>CONTACT</h3>
+            <ul>
+              <li>+91 - 12345 67890</li>
+              <li><a href="mailto:varmafotos90@gmail.com">bagawanmotor8740@gmail.com</a></li>
+              <li>123, ABC Street,<br>City Name,<br>State Name - PIN Code,<br>Country.</li>
+            </ul>
+        </div>
+        </div>
+      </footer>
+
+</body>
+</html>
