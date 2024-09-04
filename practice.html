@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image with Content Overlay</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+        }
+
+        .background-section {
+            background-image: url('images/car11.avif'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            height: 100vh; /* Full viewport height */
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Optional dark overlay for better text readability */
+            z-index: 1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+
+        .quote {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-top: 20px;
+        }
+
+        .products {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  max-width: 800px;
+  margin: 10%;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card {
+  flex: 1 0 30.33%; /* Display three cards at a time */
+  margin-right: 10px; /* Optional: Add space between cards */
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.review-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%; /* Adjust width as needed */
+    margin: 0 auto;
+}
+
+.review-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    cursor: move;
+}
+
+.move-icon {
+    cursor: move;
+    float: right;
+}
+    </style>
+</head>
+<body>
+
+  <div class="aboutus">
+    <h2>ABOUT AS</h2>
+    <p>We offer a wide range of services to help you get back on the road quickly and safely.</p>
+    <div class="service-cards">
+        <div class="service-card">
+            <img src="images/carservice.png" alt="Oil Change">
+            <h3>SERVICE & REPARING</h3>
+            <p>Regular servicing and timely repairs ensure your car's longevity, safety, and optimal performance on the road.</p>
+        </div>
+        <div class="service-card">
+            <img src="images/carpaint.png" alt="ABS Brakes">
+            <h3>TINKERING & PAINTING</h3>
+            <p>Restore your vehicle's bodywork to its original glory with expert tinkering and painting services, ensuring a flawless finish.</p>
+        </div>
+        <div class="service-card">
+            <img src="images/carwashing.png" alt="Transmission Service">
+            <h3>WATER WASHING</h3>
+            <p>Keep your vehicle looking its best with our comprehensive car washing services, removing dirt, grime, and road contaminants.</p>
+        </div>
+        <div class="service-card">
+            <img src="images/wheel.png" alt="Transmission Service">
+            <h3>WHEEL BALANCING & ALIGNMENT</h3>
+            <p>Ensure smooth and safe driving with professional wheel balancing and alignment, reducing tire wear and enhancing vehicle control.</p>
+        </div>
+        <div class="service-card">
+            <img src="images/carspa.png" alt="Transmission Service">
+            <h3>CAR SPA</h3>
+            <p>Pamper your vehicle with our premium car spa services, revitalizing both the interior and exterior for that like-new feel.</p>
+        </div>
+        <div class="service-card">
+          <img src="images/spare.png" alt="Transmission Service">
+          <h3>CAR SPARES</h3>
+          <p>Get high-quality, genuine spare parts to keep your vehicle running smoothly, ensuring reliability and longevity.</p>
+      </div>
+      <div class="service-card">
+        <img src="images/assec.png" alt="Transmission Service">
+        <h3>CAR ACCESSORIES</h3>
+        <p>Upgrade your ride with a wide range of car accessories, enhancing both the style and functionality of your vehicle.</p>
+    </div>
+    <div class="service-card">
+      <img src="images/insurences.png" alt="Transmission Service">
+      <h3>INSURENCES RENEWAL</h3>
+      <p>Stay covered on the road with hassle-free insurance renewal services, ensuring your peace of mind with comprehensive protection.</p>
+  </div>
+  <div class="service-card">
+    <img src="images/battery.png" alt="Transmission Service">
+    <h3>BATTERY SALES & SERVICES</h3>
+    <p>Keep your car powered with our reliable battery sales and services, ensuring your vehicle starts every time without a hitch.</p>
+</div>
+<div class="service-card">
+  <img src="images/lpg.png" alt="Transmission Service">
+  <h3>LPG & CNG SERVICES</h3>
+  <p>Maximize fuel efficiency and reduce emissions with our expert LPG/CNG installation and maintenance services, tailored to your vehicle's needs.</p>
+</div>
+        <!-- Add more service cards as needed -->
+    </div>
+  </div>
+
+      <div class="review-container">
+          <div class="review-item">
+              <p>This is a review.</p>
+              <div class="move-icon">&#8597;</div>  </div>
+          <div class="review-item">
+              <p>Another review.</p>
+              <div class="move-icon">&#8597;</div>
+          </div>
+          </div>
+  
+      <script>document.addEventListener('DOMContentLoaded', () => {
+        const reviewItems = document.querySelectorAll('.review-item');
+    
+        // Make the review items draggable
+        reviewItems.forEach(item => {
+            item.draggable = true;
+    
+            item.addEventListener('dragstart', (event) => {
+                event.dataTransfer.setData('text/plain', item.innerHTML);
+            });
+    
+            item.addEventListener('dragend', (event) => {
+                const target = event.target.closest('.review-item');
+                if (target && target !== event.target) {
+                    const sourceContent = event.dataTransfer.getData('text/plain');
+                    target.innerHTML = sourceContent;
+                    event.target.innerHTML = target.innerHTML;
+                }
+            });
+        });
+    });</script>
+
+
+  <div class="testimonal">
+    <h2>testimonal</h2>
+    <p>We offer a wide range of services to help you get back on the road quickly and safely.</p>
+    <div class="service-cards">
+        <div class="service-card">
+            <img src="images/carservice.png" alt="Oil Change">
+            <h3>SERVICE & REPARING</h3>
+            <p>Regular servicing and timely repairs ensure your car's longevity, safety, and optimal performance on the road.</p>
+        </div>
+        <div class="service-card">
+            <img src="images/carpaint.png" alt="ABS Brakes">
+            <h3>TINKERING & PAINTING</h3>
+            <p>Restore your vehicle's bodywork to its original glory with expert tinkering and painting services, ensuring a flawless finish.</p>
+        </div>
+        <div class="service-card">
+            <img src="images/carwashing.png" alt="Transmission Service">
+            <h3>WATER WASHING</h3>
+            <p>Keep your vehicle looking its best with our comprehensive car washing services, removing dirt, grime, and road contaminants.</p>
+        </div>
+        <div class="service-card">
+            <img src="images/wheel.png" alt="Transmission Service">
+            <h3>WHEEL BALANCING & ALIGNMENT</h3>
+            <p>Ensure smooth and safe driving with professional wheel balancing and alignment, reducing tire wear and enhancing vehicle control.</p>
+        </div>
+        <div class="service-card">
+            <img src="images/carspa.png" alt="Transmission Service">
+            <h3>CAR SPA</h3>
+            <p>Pamper your vehicle with our premium car spa services, revitalizing both the interior and exterior for that like-new feel.</p>
+        </div>
+        <div class="service-card">
+          <img src="images/spare.png" alt="Transmission Service">
+          <h3>CAR SPARES</h3>
+          <p>Get high-quality, genuine spare parts to keep your vehicle running smoothly, ensuring reliability and longevity.</p>
+      </div>
+      <div class="service-card">
+        <img src="images/assec.png" alt="Transmission Service">
+        <h3>CAR ACCESSORIES</h3>
+        <p>Upgrade your ride with a wide range of car accessories, enhancing both the style and functionality of your vehicle.</p>
+    </div>
+    <div class="service-card">
+      <img src="images/insurences.png" alt="Transmission Service">
+      <h3>INSURENCES RENEWAL</h3>
+      <p>Stay covered on the road with hassle-free insurance renewal services, ensuring your peace of mind with comprehensive protection.</p>
+  </div>
+  <div class="service-card">
+    <img src="images/battery.png" alt="Transmission Service">
+    <h3>BATTERY SALES & SERVICES</h3>
+    <p>Keep your car powered with our reliable battery sales and services, ensuring your vehicle starts every time without a hitch.</p>
+</div>
+<div class="service-card">
+  <img src="images/lpg.png" alt="Transmission Service">
+  <h3>LPG & CNG SERVICES</h3>
+  <p>Maximize fuel efficiency and reduce emissions with our expert LPG/CNG installation and maintenance services, tailored to your vehicle's needs.</p>
+</div>
+        <!-- Add more service cards as needed -->
+    </div>
+  </div>
+
+
+  <div class="products">
+    <h2>PRODUCTS</h2>
+    <p>Limited-time discount on all products and services Consectetur Adipiscing Elit</p>
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="card">
+                <img src="car1.jpg" alt="Doors and Paint">
+                <h3>DOORS AND PAINT</h3>
+                <p class="price">$120</p>
+                <p class="description">Order Any color paint for your doors or you can buy new doors</p>
+                <button>Order Now</button>
+            </div>
+            <div class="card">
+                <img src="car2.jpg" alt="Custom Interior">
+                <h3>CUSTOM INTERIOR</h3>
+                <p class="price">$120</p>
+                <p class="description">Order Leather Custom Interior Designs for your cars any color</p>
+                <button>Order Now</button>
+            </div>
+            <div class="card">
+                <img src="car3.jpg" alt="Leather Pushes">
+                <h3>LEATHER PUSHES</h3>
+                <p class="price">$120</p>
+                <p class="description">Order Leather Leather Pushes for interior Designs for your cars</p>
+                <button>Order Now</button>
+            </div>
+            <div class="card">
+              <img src="car2.jpg" alt="Custom Interior">
+              <h3>CUSTOM INTERIOR</h3>
+              <p class="price">$120</p>
+              <p class="description">Order Leather Custom Interior Designs for your cars any color</p>
+              <button>Order Now</button>
+          </div>
+          <div class="card">
+              <img src="car3.jpg" alt="Leather Pushes">
+              <h3>LEATHER PUSHES</h3>
+              <p class="price">$120</p>
+              <p class="description">Order Leather Leather Pushes for interior Designs for your cars</p>
+              <button>Order Now</button>
+          </div>
+          <div class="card">
+            <img src="car2.jpg" alt="Custom Interior">
+            <h3>CUSTOM INTERIOR</h3>
+            <p class="price">$120</p>
+            <p class="description">Order Leather Custom Interior Designs for your cars any color</p>
+            <button>Order Now</button>
+        </div>
+        <div class="card">
+            <img src="car3.jpg" alt="Leather Pushes">
+            <h3>LEATHER PUSHES</h3>
+            <p class="price">$120</p>
+            <p class="description">Order Leather Leather Pushes for interior Designs for your cars</p>
+            <button>Order Now</button>
+        </div>
+        <div class="card">
+          <img src="car2.jpg" alt="Custom Interior">
+          <h3>CUSTOM INTERIOR</h3>
+          <p class="price">$120</p>
+          <p class="description">Order Leather Custom Interior Designs for your cars any color</p>
+          <button>Order Now</button>
+      </div>
+      <div class="card">
+          <img src="car3.jpg" alt="Leather Pushes">
+          <h3>LEATHER PUSHES</h3>
+          <p class="price">$120</p>
+          <p class="description">Order Leather Leather Pushes for interior Designs for your cars</p>
+          <button>Order Now</button>
+      </div>
+            <!-- Add more cards as needed -->
+        </div>
+    </div>
+   <script>
+     const carousel = document.querySelector('.carousel');
+const cards = document.querySelectorAll('.card');
+const cardCount = cards.length;
+const visibleCards = 3; // Number of visible cards
+const cardWidth = cards[0].offsetWidth + 10; // Card width + margin
+let currentIndex = 0;
+
+function showNext() {
+  currentIndex++;
+  if (currentIndex > cardCount - visibleCards) {
+    currentIndex = 0;
+  }
+  carousel.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+}
+
+function showPrev() {
+  currentIndex--;
+  if (currentIndex < 0) {
+    currentIndex = cardCount - visibleCards;
+  }
+  carousel.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+}
+
+setInterval(showNext, 3000); // Move to the next card every 3 seconds
+
+// Optional: Add event listeners for manual controls (like buttons to go next/previous)
+
+    </script>
+</div>
+
+<div class="background-section">
+    <div class="overlay"></div>
+    <div class="content">
+        <h1>Welcome to Our Service</h1>
+        <p>We provide top-notch solutions for all your automotive needs. Our services are reliable, and we ensure the best quality for every customer.</p>
+        <p class="quote">"Quality is not an act, it is a habit." - Aristotle</p>
+    </div>
+</div>
+
+</body>
+</html>
